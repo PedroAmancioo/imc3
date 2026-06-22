@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.imc2.HelloController">
+
+    <padding>
+        <Insets bottom="15" left="15" right="15" top="15" />
+    </padding>
+
+    <!-- Título -->
+    <Label text="Painel de Monitoramento Corporativo">
+        <font>
+            <Font name="System Bold" size="22.0" />
+        </font>
+    </Label>
+
+    <Label text="Registro de Novo Usuário">
+      <font>
+         <Font size="14.0" />
+      </font></Label>
+
+    <!-- Área superior -->
+    <HBox spacing="10">
+
+        <!-- Formulário -->
+        <VBox prefWidth="250" spacing="8">
+
+            <Label text="Nome" />
+
+            <TextField fx:id="inputName" promptText="Ex: Maria Silva" />
+
+            <Label text="Email" />
+
+            <TextField fx:id="inputEmail" promptText="exemplo@email.com" />
+
+            <HBox spacing="10">
+
+                <VBox>
+                    <Label text="Peso (kg)" />
+                    <TextField fx:id="txtPeso" />
+                </VBox>
+
+                <VBox>
+                    <Label text="Altura (m)" />
+                    <TextField fx:id="txtAltura" />
+                </VBox>
+
+            </HBox>
+
+            <Button onAction="#onHelloButtonClick" text="Calcular e Adicionar" />
+
+            <Label fx:id="lblResultado" />
+
+        </VBox>
+
+        <!-- Imagem -->
+        <StackPane prefWidth="350">
+            <ImageView fitHeight="180" fitWidth="350" preserveRatio="false" />
+        </StackPane>
+
+    </HBox>
+
+    <!-- Tabela -->
+    <TableView fx:id="tabela">
+
+        <columns>
+
+            <TableColumn fx:id="colNome" prefWidth="180" text="Nome" />
+
+            <TableColumn fx:id="colEmail" prefWidth="220" text="Email" />
+
+            <TableColumn fx:id="colImc" prefWidth="100" text="IMC" />
+         <TableColumn fx:id="colStatus" prefWidth="120.0" text="Status" />
+
+        </columns>
+
+    </TableView>
+
+</VBox>
